@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /exercises",
+  "rawPath": "/exercises",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/exercises"
+    }
+  },
+  "body": "{\"name\":\"cycle\", \"mode\":\"duration\", \"imageUrl\":\"https://image2.com\"}",
+  "isBase64Encoded": false
+}

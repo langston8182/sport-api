@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "routeKey": "DELETE /exercises/{exerciseId}",
+  "rawPath": "/exercises/68c148de03dadab74271d3f6",
+  "requestContext": {
+    "http": {
+      "method": "DELETE",
+      "path": "/exercises/68c148de03dadab74271d3f6"
+    }
+  },
+  "pathParameters": {
+    "exerciseId": "68c148de03dadab74271d3f6"
+  }
+}

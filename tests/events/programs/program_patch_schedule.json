@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "routeKey": "PUT /programs/{programId}/schedule/{entryId}",
+  "rawPath": "/programs/68c148de03dadab74271d3f6/schedule/wk1-s1",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "PUT",
+      "path": "/programs/68c148de03dadab74271d3f6/schedule/wk1-s1"
+    }
+  },
+  "pathParameters": {
+    "programId": "68c148de03dadab74271d3f6",
+    "entryId": "wk1-s1"
+  },
+  "body": "{\"week\":1,\"slot\":1,\"sessionId\":\"sess-456\"}",
+  "isBase64Encoded": false
+}

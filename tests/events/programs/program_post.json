@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /programs",
+  "rawPath": "/programs",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/programs"
+    }
+  },
+  "body": "{\"name\":\"Programme test\",\"goal\":\"Force\",\"weeks\":6,\"sessionsPerWeek\":2,\"schedule\":[]}",
+  "isBase64Encoded": false
+}

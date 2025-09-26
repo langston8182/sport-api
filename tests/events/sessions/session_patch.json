@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "routeKey": "PATCH /sessions/{sessionId}",
+  "rawPath": "/sessions/68c148de03dadab74271d3f6",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "PATCH",
+      "path": "/sessions/68c148de03dadab74271d3f6"
+    }
+  },
+  "pathParameters": {
+    "sessionId": "68c148de03dadab74271d3f6"
+  },
+  "body": "{\"name\":\"Séance modifiée\", \"items\":[{\"order\":1,\"exerciseId\":\"ex999\",\"sets\":4,\"reps\":10,\"restSec\":90}]}",
+  "isBase64Encoded": false
+}

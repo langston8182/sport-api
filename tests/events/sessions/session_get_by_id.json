@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /sessions/{sessionId}",
+  "rawPath": "/sessions/123",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/sessions/123"
+    }
+  },
+  "pathParameters": {
+    "sessionId": "123"
+  }
+}

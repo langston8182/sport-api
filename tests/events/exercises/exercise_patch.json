@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "routeKey": "PATCH /exercises/{exerciseId}",
+  "rawPath": "/exercises/68c148de03dadab74271d3f6",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "PATCH",
+      "path": "/api/v1/exercises/68c148de03dadab74271d3f6"
+    }
+  },
+  "pathParameters": {
+    "exerciseId": "68c148de03dadab74271d3f6"
+  },
+  "body": "{\"name\":\"Pompes\", \"mode\":\"reps\", \"imageUrl\":\"https://image.com\"}",
+  "isBase64Encoded": false
+}

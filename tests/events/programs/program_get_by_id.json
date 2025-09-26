@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /programs/{programId}",
+  "rawPath": "/programs/123",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/programs/123"
+    }
+  },
+  "pathParameters": {
+    "programId": "123"
+  }
+}

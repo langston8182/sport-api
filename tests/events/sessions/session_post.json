@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /sessions",
+  "rawPath": "/sessions",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/sessions"
+    }
+  },
+  "body": "{\"name\":\"Séance A\", \"items\":[{\"order\":1,\"exerciseId\":\"ex123\",\"sets\":3,\"reps\":12,\"restSec\":60}]}",
+  "isBase64Encoded": false
+}

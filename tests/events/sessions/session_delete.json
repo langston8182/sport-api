@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "routeKey": "DELETE /sessions/{sessionId}",
+  "rawPath": "/sessions/68c148de03dadab74271d3f6",
+  "requestContext": {
+    "http": {
+      "method": "DELETE",
+      "path": "/sessions/68c148de03dadab74271d3f6"
+    }
+  },
+  "pathParameters": {
+    "sessionId": "68c148de03dadab74271d3f6"
+  }
+}
