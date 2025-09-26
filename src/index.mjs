@@ -1,5 +1,6 @@
 import {handleExercises} from "./controllers/exercise.controller.mjs";
-import { handleSessions } from "./controllers/sessions.controller.mjs";
+import { handleSessions } from "./controllers/session.controller.mjs";
+import { handlePrograms } from "./controllers/program.controller.mjs";
 import {ok, notFound} from "./utils/http.mjs";
 
 // normalise un path comme /api/v1/expenses/123 -> ["expenses", "123"]
@@ -19,6 +20,7 @@ export const handler = async (event) => {
     // Routing simple
     if (s[0] === "exercises") return handleExercises(event);
     if (s[0] === "sessions") return handleSessions(event);
+    if (s[0] === "programs") return handlePrograms(event);
 
     return notFound("Route not found");
 };
