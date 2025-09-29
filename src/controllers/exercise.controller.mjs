@@ -7,7 +7,7 @@ export async function handleExercises(event) {
         if (method === "OPTIONS") return ok({}); // CORS preflight
 
         if (method === "GET") {
-            const id = event.pathParameters?.exerciceId;
+            const id = event.pathParameters?.exerciseId;
             if (id) {
                 const exercise = await getExerciseById(id);
                 return ok(exercise);
