@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /weights",
+  "rawPath": "/weights",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": "{\"weight\":75.5,\"unit\":\"kg\",\"measureDate\":\"2025-10-02T10:00:00.000Z\",\"notes\":\"Poids après entraînement\"}",
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/weights"
+    }
+  }
+}

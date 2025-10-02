@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "routeKey": "PATCH /weights/{weightId}",
+  "rawPath": "/weights/507f1f77bcf86cd799439011",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": "{\"weight\":76.0,\"notes\":\"Poids rectifié\"}",
+  "pathParameters": {
+    "weightId": "507f1f77bcf86cd799439011"
+  },
+  "requestContext": {
+    "http": {
+      "method": "PATCH",
+      "path": "/weights/507f1f77bcf86cd799439011"
+    }
+  }
+}
