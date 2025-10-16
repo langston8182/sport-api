@@ -63,10 +63,10 @@ export async function getExerciseWeightsBySessionAndExercise(sessionId, exercise
 export async function patchExerciseWeight(id, payload) {
     const patch = { ...payload, updatedAt: new Date().toISOString() };
     const result = await updateExerciseWeight(id, patch);
-    if (!result.value) {
+    if (!result) {
         throw new Error("Exercise weight not found");
     }
-    return result.value;
+    return result;
 }
 
 // Supprimer un poids d'exercice
