@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /exercise-weights",
+  "rawPath": "/exercise-weights",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/exercise-weights"
+    }
+  },
+  "queryStringParameters": {
+    "exerciseId": "670f1a1e123456789abcdef0"
+  },
+  "isBase64Encoded": false
+}

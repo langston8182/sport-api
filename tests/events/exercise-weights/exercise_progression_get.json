@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /exercises/{exerciseId}/progression",
+  "rawPath": "/exercises/670f1a1e123456789abcdef0/progression",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/exercises/670f1a1e123456789abcdef0/progression"
+    }
+  },
+  "pathParameters": {
+    "exerciseId": "670f1a1e123456789abcdef0"
+  },
+  "isBase64Encoded": false
+}

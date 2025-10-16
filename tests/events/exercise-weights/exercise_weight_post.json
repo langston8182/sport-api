@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /exercise-weights",
+  "rawPath": "/exercise-weights",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/exercise-weights"
+    }
+  },
+  "body": "{\"exerciseId\":\"670f1a1e123456789abcdef0\",\"sessionId\":\"670f1a1e123456789abcdef1\",\"weight\":80.5,\"unit\":\"kg\",\"setNumber\":1,\"reps\":12}",
+  "isBase64Encoded": false
+}

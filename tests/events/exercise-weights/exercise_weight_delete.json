@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "routeKey": "DELETE /exercise-weights/{weightId}",
+  "rawPath": "/exercise-weights/670f1a1e123456789abcdef2",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "DELETE",
+      "path": "/exercise-weights/670f1a1e123456789abcdef2"
+    }
+  },
+  "pathParameters": {
+    "weightId": "670f1a1e123456789abcdef2"
+  },
+  "isBase64Encoded": false
+}
