@@ -23,12 +23,12 @@ export async function handleExerciseWeights(event) {
         const method = event.requestContext?.http?.method || event.httpMethod;
         if (method === "OPTIONS") return ok({});
 
-        // Extraire les segments de l'URL
+        // Extraire les segments de l'URL: ["exercise-weights", "id"]
         const segments = (event.rawPath || event.path || "").split("/").filter(Boolean);
         
         if (method === "GET") {
             // GET /exercise-weights/{id} - Récupérer un poids spécifique
-            const weightId = event.pathParameters?.weightId;
+            const weightId = event.pathParameters?.weightId || segments[1];
             if (weightId) {
                 const weight = await getExerciseWeightById(weightId);
                 return ok(weight);
@@ -71,7 +71,7 @@ export async function handleExerciseWeights(event) {
         }
 
         if (method === "PATCH") {
-            const weightId = event.pathParameters?.weightId;
+            const weightId = event.pathParameters?.weightId || segments[1];
             if (!weightId) return badRequest("Missing weight ID");
             
             const body = parseJsonBody(event);
@@ -80,7 +80,7 @@ export async function handleExerciseWeights(event) {
         }
 
         if (method === "DELETE") {
-            const weightId = event.pathParameters?.weightId;
+            const weightId = event.pathParameters?.weightId || segments[1];
             if (!weightId) return badRequest("Missing weight ID");
             
             await removeExerciseWeight(weightId);
