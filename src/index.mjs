@@ -3,6 +3,7 @@ import { handleSessions } from "./controllers/session.controller.mjs";
 import { handlePrograms } from "./controllers/program.controller.mjs";
 import { handleWeights } from "./controllers/weight.controller.mjs";
 import { handleExerciseWeights, handleExerciseProgression } from "./controllers/exercise-weights.controller.mjs";
+import { handleExerciseUploadInit } from "./controllers/exercise_upload.controller.mjs";
 import {ok, notFound} from "./utils/http.mjs";
 
 // normalise un path comme /api/v1/expenses/123 -> ["expenses", "123"]
@@ -21,6 +22,10 @@ export const handler = async (event) => {
 
     // Routing simple
     if (s[0] === "exercises") {
+        // Route pour l'initialisation d'upload d'image
+        if (s[1] === "upload-init") {
+            return handleExerciseUploadInit(event);
+        }
         // Route pour la progression d'un exercice spécifique
         if (s[1] && s[2] === "progression") {
             return handleExerciseProgression(event);
