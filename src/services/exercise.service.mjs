@@ -9,7 +9,7 @@ export async function createExercise(payload) {
     return insertExercise({
         name: payload.name,
         mode: payload.mode,
-        imageUrl: payload.imageUrl,
+        imageKeyOriginal: payload.imageKeyOriginal,
         createdAt: now,
         updatedAt: now
     });

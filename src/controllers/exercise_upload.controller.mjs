@@ -1,7 +1,7 @@
 import { ok, badRequest, serverError, parseJsonBody } from "../utils/http.mjs";
 import { newObjectKey, presignPutUrl } from "../utils/s3.mjs";
 
-const ALLOWED_MIME = (process.env.ALLOWED_IMAGE_MIME || "image/jpeg,image/png,image/webp")
+const ALLOWED_MIME = (process.env.ALLOWED_IMAGE_MIME || "image/jpeg,image/jpg,image/webp,image/png")
     .split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
 
 export async function handleExerciseUploadInit(event) {
