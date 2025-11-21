@@ -6,10 +6,10 @@ capabilities = "CAPABILITY_IAM"
 
 [preprod.deploy.parameters]
 stack_name = "sport-preprod"
-parameter_overrides = "Env=preprod FunctionName=sport-api-preprod AppName=sport DeployPrefType=AllAtOnce"
+parameter_overrides = "Env=preprod FunctionName=sport-api-preprod AppName=sport DeployPrefType=AllAtOnce S3BucketName=cmarchive-sport-media"
 no_confirm_changeset = true
 
 [prod.deploy.parameters]
 stack_name = "sport-prod"
-parameter_overrides = "Env=prod FunctionName=sport-api-prod AppName=sport DeployPrefType=Canary10Percent5Minutes"
+parameter_overrides = "Env=prod FunctionName=sport-api-prod AppName=sport DeployPrefType=Canary10Percent5Minutes S3BucketName=cmarchive-sport-media"
 no_confirm_changeset = true
