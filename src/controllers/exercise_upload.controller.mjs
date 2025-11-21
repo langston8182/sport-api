@@ -1,10 +1,11 @@
 import { ok, badRequest, serverError, parseJsonBody } from "../utils/http.mjs";
 import { newObjectKey, presignPutUrl } from "../utils/s3.mjs";
+import {getConfigValue} from "../utils/config.appconfig.mjs";
 
-const ALLOWED_MIME = (process.env.ALLOWED_IMAGE_MIME || "image/jpeg,image/jpg,image/webp,image/png")
-    .split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
+const ENV = process.env.ENVIRONMENT || "preprod";
 
 export async function handleExerciseUploadInit(event) {
+    const envCfg = await getConfigValue("upload_image", ENV, {});
     try {
         const method = event.requestContext?.http?.method || event.httpMethod;
         if (method !== "POST") return badRequest("Unsupported method");
@@ -12,11 +13,11 @@ export async function handleExerciseUploadInit(event) {
         const body = parseJsonBody(event) || {};
         const { contentType = "image/jpeg", ext = "jpg" } = body;
 
-        if (!ALLOWED_MIME.includes(String(contentType).toLowerCase())) {
-            return badRequest(`Unsupported contentType. Allowed: ${ALLOWED_MIME.join(", ")}`);
+        if (!envCfg.ALLOWED_MIME.includes(String(contentType).toLowerCase())) {
+            return badRequest(`Unsupported contentType. Allowed: ${envCfg.ALLOWED_MIME.join(", ")}`);
         }
 
-        const key = newObjectKey(ext);
+        const key = await newObjectKey(ext);
         const uploadUrl = await presignPutUrl({ key, contentType });
         return ok({
             uploadUrl,
