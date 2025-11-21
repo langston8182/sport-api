@@ -16,6 +16,10 @@ Parameters:
     Type: String
     AllowedValues: [AllAtOnce, Canary10Percent5Minutes]
     Default: AllAtOnce
+  S3BucketName:
+    Type: String
+    Default: cmarchive-sport-media
+    Description: S3 bucket name for media uploads
 
 Globals:
   Function:
@@ -49,6 +53,12 @@ Resources:
                 - appconfig:StartConfigurationSession
                 - appconfig:GetLatestConfiguration
               Resource: "*"
+            - Sid: SportS3Upload
+              Effect: Allow
+              Action: s3:PutObject
+              Resource:
+                - !Sub "arn:aws:s3:::${S3BucketName}/originals/*"
+                - "arn:aws:s3:eu-west-3:489767271637:accesspoint/*/object/*"
 
 Outputs:
   FunctionArn:

@@ -11,14 +11,14 @@ const ORIGINALS_PREFIX = process.env.ORIGINALS_PREFIX || "originals/";
 const UPLOAD_EXPIRES_SEC = parseInt(process.env.UPLOAD_EXPIRES_SEC || "300", 10); // 5 min
 
 export async function newObjectKey(ext = "jpg") {
-    const envCfg = await getConfigValue("upload_image", ENV, {});
+    const envCfg = await getConfigValue("upload_image", "", {});
     const id = crypto.randomUUID();
     const safeExt = String(ext).replace(/[^a-z0-9]/gi, "") || "jpg";
     return `${envCfg.ORIGINALS_PREFIX}${id}.${safeExt}`;
 }
 
 export async function presignPutUrl({ key, contentType, expiresInSec = UPLOAD_EXPIRES_SEC }) {
-    const envCfg = await getConfigValue("upload_image", ENV, {});
+    const envCfg = await getConfigValue("upload_image", "", {});
     const cmd = new PutObjectCommand({
         Bucket: envCfg.BUCKET,
         Key: key,
