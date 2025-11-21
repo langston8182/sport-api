@@ -5,7 +5,7 @@ import {getConfigValue} from "../utils/config.appconfig.mjs";
 const ENV = process.env.ENVIRONMENT || "preprod";
 
 export async function handleExerciseUploadInit(event) {
-    const envCfg = await getConfigValue("upload_image", ENV, {});
+    const envCfg = await getConfigValue("upload_image", "", {});
     try {
         const method = event.requestContext?.http?.method || event.httpMethod;
         if (method !== "POST") return badRequest("Unsupported method");
